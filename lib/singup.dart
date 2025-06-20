@@ -186,7 +186,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                         if (!isloginmode) {
                           var url = Uri.parse(
-                            "http://localhost:8080/ammu_app/register.php",
+                            "http://localhost:80/ammu/signup.php",
+                             
                           );
 
                           var response = await http.post(
@@ -239,26 +240,26 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         } else {
 
                          
-                          // emailController.clear();
-                          // passwordController.clear();
+                          emailController.clear();
+                          passwordController.clear();
 
-                          // var url = Uri.parse(
-                          //   "http://localhost:8080/ammu_app/register.php",
-                          // );
-                          // var response = await http.post(
-                          //   url,
-                          //   body: {'email': email, 'password': password},
-                          // );
-                          // if (response.statusCode == 200) {
-                          //   final data = jsonDecode(response.body);
+                          var url = Uri.parse(
+                            "http://localhost:80/ammu/user.php",
+                          );
+                          var response = await http.post(
+                            url,
+                            body: {'email': email, 'password': password},
+                          );
+                          if (response.statusCode == 200) {
+                            final data = jsonDecode(response.body);
                              
-                          //   if (data['status'] == 'success') {
+                            if (data['status'] == 'success') {
                              
                               
-                          //   } else {
+                            } else {
                              
-                          //   }
-                          // }
+                            }
+                          }
                         }
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
