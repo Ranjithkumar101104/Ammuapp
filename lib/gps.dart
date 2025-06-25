@@ -1,4 +1,4 @@
-import 'dart:async';
+// import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -11,7 +11,7 @@ class GPSTrackingScreen extends StatefulWidget {
 
 class _GPSTrackingScreenState extends State<GPSTrackingScreen> {
   // Controller for the Google Map
-  final Completer<GoogleMapController> _controller = Completer();
+  // final Completer<GoogleMapController> _controller = Completer();
   // State for the selected user filter
   String _selectedUser = 'Rose';
 
@@ -210,9 +210,9 @@ class _GPSTrackingScreenState extends State<GPSTrackingScreen> {
                   mapType: MapType.normal,
                   initialCameraPosition: _initialCameraPosition,
                   onMapCreated: (GoogleMapController controller) {
-                    if (!_controller.isCompleted) {
-                      _controller.complete(controller);
-                    }
+                    // // if (!_controller.isCompleted) {
+                    // //   _controller.complete(controller);
+                    // }
                   },
                   markers: markers,
                   zoomControlsEnabled: false,
