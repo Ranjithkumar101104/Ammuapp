@@ -18,7 +18,7 @@ class _HeatwaveState extends State<Heatwave> {
   
   // State variables to hold the current heat data.
   double _currentHeatValue = 150.0;
-  String _locationName = 'Tiruchirappalli'; // Default location
+  String _locationName = 'Thanjavur'; // Default location
   String _statusText = 'NOT GOOD';
   Color _statusColor = Colors.orange;
   bool _isLoading = false; // To show a loading indicator

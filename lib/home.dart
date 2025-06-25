@@ -1,4 +1,4 @@
-import 'dart:async';
+// import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
@@ -46,9 +46,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // Timer to navigate to Home_Page after splash screen
-    Timer(const Duration(seconds: 3), () { // Reduced to 3 seconds for easier testing
-      Navigator.pushReplacementNamed(context, '/home'); // Changed to '/home'
-    });
+    // Timer(const Duration(seconds: 3), () { // Reduced to 3 seconds for easier testing
+    //   Navigator.pushReplacementNamed(context, '/home'); // Changed to '/home'
+    // });
   }
 
   @override

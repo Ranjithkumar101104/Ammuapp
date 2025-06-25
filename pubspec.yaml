@@ -35,7 +35,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   device_preview: any
-  contacts_service: ^0.6.3
   permission_handler: ^11.3.1
   http: ^1.4.0
   fl_chart: ^1.0.0
